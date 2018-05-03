@@ -1,5 +1,11 @@
 Rails.application.configure do
+  DOMAIN = "scotch-action-cable-demo.herokuapp.com"
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_cable.url = "ws://#{DOMAIN}/cable"
+  config.action_cable.allowed_request_origins = [
+    "https://#{DOMAIN}",
+    "http://#{DOMAIN}",
+  ]
 
   # Code is not reloaded between requests.
   config.cache_classes = true
