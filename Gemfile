@@ -52,3 +52,6 @@ end
 
 # authentication
 gem 'clearance', '~> 1.16'
+
+# frontend
+gem 'jquery-rails'
